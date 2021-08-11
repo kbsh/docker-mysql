@@ -1,0 +1,16 @@
+version: "3"
+services:
+  db:
+    image: mysql:5.7
+    container_name: db-container
+    #    restart: always
+    environment:
+      TZ: Asia/Tokyo
+      MYSQL_ROOT_PASSWORD: pass
+    #      DB_HOST: localhost
+    #      DB_USER: root
+    #      DB_PSWD: hoge
+    #      DB_NAME: test
+    volumes:
+      - ./initdb/:/docker-entrypoint-initdb.d/
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
