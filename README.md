@@ -19,7 +19,16 @@
 $ docker-compose up -d --build
 ```
 
-CUI での接続
+初期投入データの変更時
+
+```
+$ docker-compose down  --rmi all
+$ docker-compose up -d --build
+```
+
+## DB 接続
+
+#### CUI での接続
 
 ```
 $ docker exec -it db-container bash
@@ -27,9 +36,9 @@ root@f1706d333800:/# mysql -uroot -p
 Enter password:
 ```
 
-初期投入データの変更時
+#### GUI クライアントでの接続
 
-```
-$ docker-compose down  --rmi all
-$ docker-compose up -d --build
-```
+- host: 127.0.0.1
+- port: 3306
+- user: root
+- password: 設定値
