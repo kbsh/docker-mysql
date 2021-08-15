@@ -5,7 +5,7 @@ MySQLをローカルにダウンロードせずに、dockerでMySQL立ち上げ�
 
 ## 前提
 
-- docker for Mac などを利用していること
+- [Docker Desktop](https://docs.docker.com/docker-for-mac/install/) などを利用していること
 
 ## 環境に合わせた変更
 
